@@ -74,11 +74,11 @@ enter_prop_tax = ttk.Entry(main_win, width=12, textvariable=prop_tax)
 enter_prop_tax.grid(column=1, row=8)
 
 # Apply button
-apply_action = ttk.Button(main_win, text="Apply", command=plotting.show_plt)
+apply_action = ttk.Button(main_win, text="Plot", command=plotting.show_plt)
 apply_action.grid(column=0, row=9)
 
 
 
 # Random button
-random_action = ttk.Button(main_win, text="Random", command=plotting.random_plt)
+random_action = ttk.Button(main_win, text="Randomize", command=plotting.random_plt)
 random_action.grid(column=1, row=9)
