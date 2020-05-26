@@ -3,8 +3,8 @@ import numpy as np
 import calc
 import window
 import random
+from scipy.optimize import fsolve
 
-random_counter = 0
 
 def show_plt():
     fig = plt.figure()
@@ -12,8 +12,8 @@ def show_plt():
     ax.set_title('Supply and demand of product X\n')
     ax.set_xlabel('Quantity\n')
     ax.set_ylabel('Price')
-    price_when_demand_0 = int(int(window.demand_1.get()) / (int(window.demand_el.get())))
-    price = np.linspace(1, price_when_demand_0, 100000)
+    max_graph = fsolve(calc.quantity_eq_after_tax, 0.01) * 2
+    price = np.linspace(1, max_graph, 100000)
     calc.demand_curve = plt.plot(price, window.demand_1.get() - (window.demand_el.get() * (price - 1)))
     supply_curve = plt.plot(price, window.supply_1.get() + (window.supply_el.get() * (price - 1)))
     tax_supply_curve = plt.plot(price, window.supply_1.get() + window.fix_tax.get() + (
@@ -34,8 +34,8 @@ def random_plt():
     supply_el = random.uniform(0.1, 0.9)
     fix_tax = random.uniform(0.5, 10)
     prop_tax = random.uniform(0.01, 0.9)
-    price_when_demand_0 = demand_1 / demand_el
-    price = np.linspace(1, price_when_demand_0, 100000)
+    max_graph = demand_1 / demand_el
+    price = np.linspace(1, max_graph, 100000)
     calc.demand_curve = plt.plot(price, demand_1 - (demand_el * (price - 1)))
     supply_curve = plt.plot(price, supply_1 + (supply_el * (price - 1)))
     tax_supply_curve = plt.plot(price, supply_1 + fix_tax + (

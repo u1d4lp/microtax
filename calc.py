@@ -19,4 +19,5 @@ def price_eq_before_tax():
 def printc():
     q_eq_b_tax = fsolve(quantity_eq_before_tax, 0.01)
     q_eq_a_tax = fsolve(quantity_eq_after_tax, 0.01)
-    #g0 = fsolve(price_eq_before_tax, 0.01)
+    price_b_tax = 0
+    price_a_tax =0
