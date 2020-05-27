@@ -12,11 +12,12 @@ def show_plt():
     ax.set_title('Supply and demand of product X\n')
     ax.set_xlabel('Quantity\n')
     ax.set_ylabel('Price')
+    ax.grid(True)
     max_graph = fsolve(calc.quantity_eq_after_tax, 0.01) * 2
-    quantity = np.linspace(1, max_graph, 100000)
-    demand_curve = plt.plot()
-    supply_curve = plt.plot()
-    tax_supply_curve = plt.plot()
+    quantity = np.linspace(0, window.demand_1.get(), 100000)
+    demand_curve = plt.plot(quantity, (-quantity + window.demand_1.get())/window.demand_el.get())
+    #supply_curve =
+    #tax_supply_curve =
     calc.printc()
     plt.show()
 
@@ -27,6 +28,7 @@ def random_plt():
     ax.set_title('Supply and demand of product X\n')
     ax.set_xlabel('Quantity\n')
     ax.set_ylabel('Price')
+    ax.grid(True)
     demand_1 = random.uniform(100, 500)
     demand_el = random.uniform(0.1, 0.9)
     supply_1 = random.uniform((demand_1 / 2), (demand_1 / 5))
