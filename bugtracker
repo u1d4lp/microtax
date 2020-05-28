@@ -1,5 +1,4 @@
 TO DO:
-    1. correct window. variables name
     2. correct plotting.randomplt()
         a. randomize window. variables
         b. call show_plt()

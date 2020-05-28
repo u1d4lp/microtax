@@ -35,10 +35,10 @@ menu_bar.add_cascade(label="Help", menu=help_menu)
 
 # Labels, column = 0
 
-ttk.Label(main_win, text="\tProduct demand when price is $1\n").grid(column=0, row=1)
+ttk.Label(main_win, text="\tProduct maximum demand\n").grid(column=0, row=1)
 ttk.Label(main_win, text="\tDemand curve elasticity\n").grid(column=0, row=2)
 ttk.Label(main_win, text="\n\tEnter supply definitions\n").grid(column=0, row=3)
-ttk.Label(main_win, text="\tProduct supply when price is $1\n").grid(column=0, row=4)
+ttk.Label(main_win, text="\tProduct minimum supply\n").grid(column=0, row=4)
 ttk.Label(main_win, text="\tSupply curve elasticity\n").grid(column=0, row=5)
 ttk.Label(main_win, text="\n\tEnter tax options\n").grid(column=0, row=6)
 ttk.Label(main_win, text="\tFixed tax per product\n").grid(column=0, row=7)
@@ -49,17 +49,17 @@ ttk.Label(main_win, text="     ").grid(column=1, row=0)
 
 
 # Textbox widgets, column = 1
-demand_1 = tk.IntVar()
-enter_demand_1 = ttk.Entry(main_win, width=12, textvariable=demand_1)
-enter_demand_1.grid(column=1, row=1)
+demand_max = tk.IntVar()
+enter_demand_max = ttk.Entry(main_win, width=12, textvariable=demand_max)
+enter_demand_max.grid(column=1, row=1)
 
 demand_el = tk.DoubleVar()
 enter_demand_el = ttk.Entry(main_win, width=12, textvariable=demand_el)
 enter_demand_el.grid(column=1, row=2)
 
-supply_1 = tk.IntVar()
-enter_supply_1 = ttk.Entry(main_win, width=12, textvariable=supply_1)
-enter_supply_1.grid(column=1, row=4)
+supply_min = tk.IntVar()
+enter_supply_min = ttk.Entry(main_win, width=12, textvariable=supply_min)
+enter_supply_min.grid(column=1, row=4)
 
 supply_el = tk.DoubleVar()
 enter_supply_el = ttk.Entry(main_win, width=12, textvariable=supply_el)
