@@ -1,12 +1,15 @@
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 import numpy as np
 import calc
 import window
 import random
+import theme
 from scipy.optimize import fsolve
 
 
 def show_plt():
+    mpl.style.use(theme.style)
     fig = plt.figure()
     ax = plt.axes()
     ax.set_title('Supply and demand of product X\n')
@@ -21,6 +24,7 @@ def show_plt():
 
 
 def random_plt():
+    mpl.style.use(theme.style)
     fig = plt.figure()
     ax = plt.axes()
     ax.set_title('Supply and demand of product X\n')

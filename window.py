@@ -3,6 +3,7 @@ from tkinter import ttk
 import plotting
 import about
 import file
+import theme
 
 main_win = tk.Tk()
 main_win.title("microtax")
@@ -21,8 +22,7 @@ help_menu = tk.Menu(menu_bar)
 file_menu.add_command(label="Clear", command=file.clear)
 file_menu.add_command(label="Quit", command=file.quit_app)
 
-edit_menu.add_command(label="Theme")
-edit_menu.add_command(label="Resizable")
+edit_menu.add_command(label="Set theme", command=theme.show)
 edit_menu.add_command(label="Font")
 
 help_menu.add_command(label="Manual", command=about.manual)
