@@ -14,8 +14,6 @@ menu_bar = tk.Menu(main_win)
 main_win.config(menu=menu_bar)
 
 file_menu = tk.Menu(menu_bar)
-edit_menu = tk.Menu(menu_bar)
-appearance_menu = tk.Menu(menu_bar)
 help_menu = tk.Menu(menu_bar)
 
 
