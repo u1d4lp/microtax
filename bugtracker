@@ -1,8 +1,5 @@
 TO DO:
-    2. correct plotting.randomplt()
-        a. randomize window. variables
-        b. call show_plt()
-        c. clear window. textboxes
+    1. prettify plots
     3. prettify readme
     4. implement themes
     5. prettify about
