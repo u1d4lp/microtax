@@ -22,15 +22,12 @@ help_menu = tk.Menu(menu_bar)
 file_menu.add_command(label="Clear", command=file.clear)
 file_menu.add_command(label="Quit", command=file.quit_app)
 
-edit_menu.add_command(label="Set theme", command=theme.show)
-edit_menu.add_command(label="Font")
 
 help_menu.add_command(label="Manual", command=about.manual)
 help_menu.add_command(label="About Microtax", command=about.show)
 
 
 menu_bar.add_cascade(label="File", menu=file_menu)
-menu_bar.add_cascade(label="Edit", menu=edit_menu)
 menu_bar.add_cascade(label="Help", menu=help_menu)
 
 # Labels, column = 0
@@ -76,8 +73,6 @@ enter_prop_tax.grid(column=1, row=8)
 # Apply button
 apply_action = ttk.Button(main_win, text="Plot", command=plotting.show_plt)
 apply_action.grid(column=0, row=9)
-
-
 
 # Random button
 random_action = ttk.Button(main_win, text="Randomize", command=plotting.random_plt)
