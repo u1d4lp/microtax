@@ -18,6 +18,7 @@ help_menu = tk.Menu(menu_bar)
 
 
 file_menu.add_command(label="Clear", command=file.clear)
+file_menu.add_command(label="Save", command=file.save)
 file_menu.add_command(label="Quit", command=file.quit_app)
 
 

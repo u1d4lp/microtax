@@ -7,7 +7,8 @@ def open_file():
     return
 
 
-def save_file():
+def save():
+    f = open("plot.txt", "w+")
     return
 
 
