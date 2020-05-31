@@ -32,10 +32,10 @@ def random_plt():
     ax.grid(True)
     demand_max = random.uniform(100, 500)
     demand_el = random.uniform(0.1, 0.9)
-    supply_min = random.uniform((demand_max / 2), (demand_max / 5))
+    supply_min = random.uniform((demand_max / 20), (demand_max / 10))
     supply_el = random.uniform(0.1, 0.9)
     fix_tax = random.uniform(0.5, 10)
-    prop_tax = random.uniform(0.01, 0.9)
+    prop_tax = random.uniform(0.1, 0.5)
     quantity = np.linspace(supply_min, demand_max, 100000)
     demand_curve = plt.plot(quantity, (-quantity + demand_max) / demand_el)  # azul
     supply_curve = plt.plot(quantity, (quantity - supply_min) / supply_el)  # laranja
